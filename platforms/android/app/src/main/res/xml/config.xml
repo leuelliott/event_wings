@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="" id="com.proevent.dele.eventwings" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="Permissions">
+        <param name="android-package" value="com.android.plugins.Permissions" />
+    </feature>
+    <name>EventWing</name>
+    <description>
+        An Event Management System.
+    </description>
+    <author email="deelesisuanu@gmail.com" href="http://deelesisuanu.com">
+        Deelesi Suanu
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <config-file after="uses-permission" parent="/manifest" target="AndroidManifest.xml">
+        <uses-permission android:name="android.permission.CAMERA" />
+    </config-file>
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="loadUrlTimeoutValue" value="240000" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarBackgroundColor" value="#7840d8" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="LoadingDialog" value="Please Wait..." />
+    <preference name="HideKeyboardFormAccessoryBar" value="true" />
+    <preference name="Fullscreen" value="true" />
+</widget>
