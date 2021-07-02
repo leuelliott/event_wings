@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="description" content="" />
+    <meta name="author" content="Deelesi Suanu" />
+    <title>EventWings - Event Manager</title>
+
+    <!-- Favicons -->
+    <!-- <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.html" sizes="180x180">
+    <link rel="icon" href="assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.html" color="#ffffff">
+    <link rel="icon" href="assets/img/favicons/favicon.ico"> -->
+
+    <!-- Elegant font icons -->
+    <link href="assets/vendor/elegant_font/HTMLCSS/style.css" rel="stylesheet" />
+    <!-- Elegant font icons -->
+    <link href="assets/vendor/materializeicon/material-icons.css" rel="stylesheet" />
+    <!-- Swiper Slider -->
+    <link href="assets/vendor/swiper/css/swiper.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style-purple.css" rel="stylesheet" id="style" />
+
+    <link rel="stylesheet" href="jquery-confirm.min.css" />
+
+    <style>
+        .customiseTextHere {
+            background-color: rgba(120, 64, 216);
+            padding: 4px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body class="ui-rounded">
+    <!-- Page laoder -->
+    <div class="container-fluid pageloader">
+        <div class="row h-100">
+            <div class="col-12 align-self-start text-center"></div>
+            <div class="col-12 align-self-center text-center">
+                <div class="loader-logo">
+                    <div class="logo">
+                        E<span>W</span><span>W</span>
+                        <div class="loader-roller">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <h4 class="logo-text">
+                        <span>EventWings</span><small>Event Booking App</small>
+                    </h4>
+                </div>
+            </div>
+            <div class="col-12 align-self-end text-center">
+                <p class="my-5">
+                    Please wait<br /><small class="text-mute">...</small>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Page laoder ends -->
+
+    <!-- Fixed navbar -->
+    <header class="header fixed-top header-fill">
+        <nav class="navbar">
+            <!-- <div>
+                <button class="menu-btn btn btn-link btn-44">
+                    <span class="icon material-icons">menu</span>
+                </button>
+            </div> -->
+            <div>
+                <a class="navbar-brand" href="javascript:void(0);">
+                    <div class="logo">E<span>W</span><span>W</span></div>
+                    <h4 class="logo-text">
+                        <span>EventWings</span><small>Event Booking</small>
+                    </h4>
+                </a>
+            </div>
+            <div>
+                <form class="form-inline search" onsubmit="return false;">
+                    <input class="form-control w-100" id="topSearchValue" type="text" placeholder="Search..." aria-label="Search" />
+                    <button class="btn btn-link btn-44" type="button">
+                        <span class="icon_search"></span>
+                    </button>
+                </form>
+                <button class="loggedIn btn btn-link search-btn" type="button">
+                    <span class="icon_search"></span>
+                </button>
+                <!-- <a href="#" class=""><span class="avatar avatar-30"><img src="assets/img/user1.png" alt=""></span></a> -->
+            </div>
+        </nav>
+    </header>
+    <!-- Fixed navbar ends -->
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0 main-container pb-0">
+        <!-- page content goes here -->
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="container-fluid py-3 bg-white border-bottom" style="display: none">
+                    <!-- Swiper -->
+                    <div class="swiper-container swiper-stories">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide w-auto">
+                                <a class="col-auto px-2" data-toggle="modal" data-target="#statusmodal">
+                                    <figure class="avatar avatar-70 rounded-circle">
+                                        <img src="assets/img/user2.png" alt="" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="swiper-slide w-auto">
+                                <a class="col-auto px-2" data-toggle="modal" data-target="#statusmodal">
+                                    <figure class="avatar avatar-70 rounded-circle">
+                                        <img src="assets/img/user4.png" alt="" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="swiper-slide w-auto">
+                                <a class="col-auto px-2" data-toggle="modal" data-target="#statusmodal">
+                                    <figure class="avatar avatar-70 rounded-circle">
+                                        <img src="assets/img/user1.png" alt="" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="swiper-slide read w-auto">
+                                <a class="col-auto px-2" data-toggle="modal" data-target="#statusmodal">
+                                    <figure class="avatar avatar-70 rounded-circle">
+                                        <img src="assets/img/user2.png" alt="" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="swiper-slide read w-auto">
+                                <a class="col-auto px-2" data-toggle="modal" data-target="#statusmodal">
+                                    <figure class="avatar avatar-70 rounded-circle">
+                                        <img src="assets/img/user3.png" alt="" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="swiper-slide read w-auto">
+                                <a class="col-auto px-2" data-toggle="modal" data-target="#statusmodal">
+                                    <figure class="avatar avatar-70 rounded-circle">
+                                        <img src="assets/img/user4.png" alt="" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="swiper-slide read w-auto">
+                                <a class="col-auto px-2" data-toggle="modal" data-target="#statusmodal">
+                                    <figure class="avatar avatar-70 rounded-circle">
+                                        <img src="assets/img/user1.png" alt="" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="swiper-slide read w-auto">
+                                <a class="col-auto px-2" data-toggle="modal" data-target="#statusmodal">
+                                    <figure class="avatar avatar-70 rounded-circle">
+                                        <img src="assets/img/user2.png" alt="" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="swiper-slide read w-auto">
+                                <a class="col-auto px-2" data-toggle="modal" data-target="#statusmodal">
+                                    <figure class="avatar avatar-70 rounded-circle">
+                                        <img src="assets/img/user3.png" alt="" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="swiper-slide read w-auto">
+                                <a class="col-auto px-2" data-toggle="modal" data-target="#statusmodal">
+                                    <figure class="avatar avatar-70 rounded-circle">
+                                        <img src="assets/img/user4.png" alt="" />
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container my-4">
+                    <div class="">
+                        <div class="btn-content text-center mt-3">
+                            <button type="button" id="btn-scan-qr" class="btn btn-block btn-danger" data-toggle="modal" data-target="#fullHeightModalRight">Scan QrCode</button>
+                            <button style="display: none;" type="button" id="popupQrCodeScan" class="btn btn-block btn-danger" data-toggle="modal" data-target="#fullHeightModalRight2">Scan QrCode</button>
+                        </div>
+                        <br/>
+                        <button type="button" id="create-event-toggle" class="btn btn-block btn-primary"
+                            style="border: none; background-color: #7840d8">
+                            <i class="material-icons">library_books</i> Create New Event
+                        </button>
+                    </div>
+                    <div class="card create-event-card" style="display: none; margin-top: 10px">
+                        <div class="card-body p-0">
+                            <input type="text" class="form-control border-0" id="eventName"
+                                placeholder="Event Name Goes Here" />
+                            <hr />
+                            <input type="number" class="form-control border-0" id="eventPrice" placeholder="Event Amount (if Free Leave Empty or enter 0)" />
+                            <hr />
+                            <input type="datetime-local" class="form-control border-0" id="eventDateTime" />
+                            <hr />
+                            <select id="eventCategory" class="form-control">
+                                <option value="">Please select Event Category</option>
+                                <option>Awards</option>
+                                <option>Workshops</option>
+                                <option>Trade shows</option>
+                                <option>Networking sessions</option>
+                                <option>Others</option>
+                                <option>Music Concerts</option>
+                                <option>Festivals and parties</option>
+                                <option>Webinars</option>
+                                <option>Sponsorship</option>
+                            </select>
+                            <hr />
+                            <textarea id="eventDescription" class="form-control border-0" rows="2" placeholder="Event Description Here..."></textarea>
+                            <input type="file" id="eventMainIcon" style="display: none" accept="image/*" />
+                        </div>
+                        <div class="card-footer py-2">
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-link btn-sm px-2 text-default select-event-file">
+                                        <i class="material-icons vm">camera_alt</i>
+                                    </button>
+                                    <div id="featIconFileName"></div>
+                                </div>
+                                <div class="col-auto align-self-center">
+                                    <div class="spinner-border" role="status" id="btnSpinner" style="display: none">
+                                        <span class="visually-hidden"></span>
+                                    </div>
+                                    <button class="btn btn-sm btn-default text-uppercase px-3" id="btnCreateEvent">
+                                        <span>Post</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="swiper-container swiper-stories multiple">
+                            <div class="swiper-wrapper" id="eventHomeSlide"></div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div id="eventHomeLists"></div>
+                </div>
+                <div class="container" style="display: none">
+                    <!-- <h5 class="page-subtitle">Follow people</h5> -->
+                    <div class="container">
+                        <!-- <div class="row" id="loadFollowingUser"></div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="search" role="tabpanel" aria-labelledby="search-tab">
+                <div class="container-fluid pt-4 h-250 bg-default">
+                    <input type="text" class="form-control" placeholder="Search here..." id="searchPageSearchVal" />
+                </div>
+                <div class="container" style="margin-top: 10px;">
+                    <div id="eventSearchLists"></div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="chat" role="tabpanel" aria-labelledby="chat-tab">
+                <div class="banner-hero vh-100 scroll-y bg-default">
+                    <div class="background opacity-20">
+                        <img src="assets/img/team6.jpg" alt="" />
+                    </div>
+                    <div class="container h-100 text-white">
+                        <div class="row h-100 h-sm-auto">
+                            <div class="col-12 col-md-8 col-lg-5 col-xl-4 mx-auto align-self-center text-center">
+                                <h5 class="font-weight-light mb-1 text-mute">
+                                    Welcome back,
+                                </h5>
+                                <h3 class="font-weight-normal mb-4">Please Sign In</h3>
+                                <div class="form-group">
+                                    <label for="signinEmail" class="sr-only">Email address</label>
+                                    <input type="email" id="signinEmail" class="form-control form-control-lg border-0"
+                                        placeholder="Email address" required="" autofocus="" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="signinPassword" class="sr-only">Password</label>
+                                    <input type="password" id="signinPassword"
+                                        class="form-control form-control-lg border-0" placeholder="Password"
+                                        required="" />
+                                </div>
+                                <div class="my-3 row">
+                                    <div class="col-6 col-md py-1 text-right text-md-right">
+                                        <a href="javascript:void(0);" class="text-white">Forgot Password?</a>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <a href="javascript:void(0);" class="btn btn-lg btn-light text-default default-shadow btn-block" id="signinButton">
+                                        <span id="signinArrow">
+                                            Sign Up <span class="ml-2 icon arrow_right"></span>
+                                        </span>
+                                        <div class="spinner-border" role="status" id="signinSpinner" style="display: none">
+                                            <span class="visually-hidden"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="mb-4">
+                                    <p>
+                                        Don't have account yet? Please
+                                        <a href="javascript:void(0);" class="text-white access-register">Sign up</a>
+                                        here.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="chat2" role="tabpanel" aria-labelledby="chat-tab2">
+                <div class="banner-hero vh-100 scroll-y bg-default">
+                    <div class="background opacity-20">
+                        <img src="assets/img/team6.jpg" alt="" />
+                    </div>
+                    <div class="container h-100 text-white">
+                        <div class="row h-100 h-sm-auto">
+                            <div class="col-12 col-md-8 col-lg-5 col-xl-4 mx-auto align-self-center text-center">
+                                <h5 class="font-weight-light mb-1 text-mute">
+                                    Welcome to EventWings
+                                </h5>
+                                <h3 class="font-weight-normal mb-4">Sign Up</h3>
+                                <div class="form-group">
+                                    <label for="signupName" class="sr-only">Full Name</label>
+                                    <input type="text" id="signupName" class="form-control form-control-lg border-0"
+                                        placeholder="Full Name" required="" autofocus="" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="signupEmail" class="sr-only">Email address</label>
+                                    <input type="email" id="signupEmail" class="form-control form-control-lg border-0"
+                                        placeholder="Email address" required="" autofocus="" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="signupPassword" class="sr-only">Password</label>
+                                    <input type="password" id="signupPassword"
+                                        class="form-control form-control-lg border-0" placeholder="Password"
+                                        required="" />
+                                </div>
+                                <div class="mb-4">
+                                    <a href="javascript:void(0);" class="
+                        btn btn-lg btn-light
+                        text-default
+                        default-shadow
+                        btn-block
+                      " id="signupButton">
+                                        <span id="signupArrow">
+                                            Sign Up <span class="ml-2 icon arrow_right"></span>
+                                        </span>
+                                        <div class="spinner-border" role="status" id="signupSpinner"
+                                            style="display: none">
+                                            <span class="visually-hidden"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="mb-4">
+                                    <p>
+                                        Have an account?
+                                        <a href="javascript:void(0);" class="text-white access-login">Sign in</a>
+                                        here.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="favorite" role="tabpanel" aria-labelledby="favorite-tab">
+                <div class="container-fluid px-0"></div>
+                <div class="container">
+                    <h6 class="page-subtitle">Favorites</h6>
+                    <div id="eventLikedLists"></div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="position-relative overflow-hidden h-200">
+                    <div class="background">
+                        <img src="assets/img/ecommercecover.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="container top-100 text-center mb-4">
+                    <figure class="avatar avatar-180 rounded-circle shadow mx-auto">
+                        <!-- <img src="assets/img/user1.png" alt=""> -->
+                    </figure>
+                </div>
+                <div class="container-fluid text-center">
+                    <h4 class="profileNameDisplay"></h4>
+                    <p class="text-mute profileEmailDisplay"></p>
+                    <a href="javascript:void(0);" id="initializeLogoutButton"
+                        class="btn btn-lg btn-light text-default default-shadow btn-block">Logout<span
+                            class="ml-2 icon icon_lock"></span></a>
+                    <div class="row py-4 bg-white mt-4">
+                        <div class="col">
+                            <h4 class="mb-1 profileNumLikesDisplay">10k</h4>
+                            <a href="#" class="text-mute">Likes</a>
+                        </div>
+                        <div class="col">
+                            <h4 class="mb-1 profileNumBookingsDisplay"></h4>
+                            <a href="#" class="text-mute">Booked Events</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <h6 class="page-subtitle">Personal Details</h6>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="text-mute">Email Address</label>
+                                <p class="profileEmailDisplay"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="page-subtitle mt-0">
+                        <span>Recently Booked Events</span>
+                    </h6>
+                    <div id="eventProfileLists"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- End of page content -->
+
+    <div class="modal fade bottom" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-bottom" role="document">
+            <div class="modal-content">
+                <div class="modal-body purple-gradient">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <canvas hidden="" id="qr-canvas" style="width: 100%; height: 350px;"></canvas>
+                            <div id="qr-result" hidden="">
+                                <b>Data:</b> <span id="outputData"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bottom" id="fullHeightModalRight2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-bottom" role="document">
+            <div class="modal-content">
+                <div class="modal-body purple-gradient">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="" id="showQrCodeInfo" class="img-responsive img-thumbnail img-rounded" style="width: 100%; height: 350px;" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container section-100"></div>
+        <hr class="mt-0" />
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-auto text-center"></div>
+            </div>
+            <hr />
+        </div>
+    </footer>
+
+    <!-- sticky footer tabs -->
+    <div class="footer-tabs border-top text-center loggedIn">
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                    aria-selected="true">
+                    <i class="material-icons">home</i>
+                    <small class="sr-only">Home</small>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="search-tab" data-toggle="tab" href="#search" role="tab" aria-controls="search"
+                    aria-selected="false">
+                    <i class="material-icons">search</i>
+                    <small class="sr-only">search</small>
+                </a>
+            </li>
+            <li class="nav-item" style="display: none">
+                <a class="nav-link" id="chat-tab" data-toggle="tab" href="#chat" role="tab" aria-controls="chat"
+                    aria-selected="false">
+                    <i class="material-icons">chat_bubble_outline</i>
+                    <small class="sr-only">chat</small>
+                </a>
+            </li>
+            <li class="nav-item" style="display: none">
+                <a class="nav-link" id="chat-tab2" data-toggle="tab" href="#chat2" role="tab" aria-controls="chat2"
+                    aria-selected="false">
+                    <i class="material-icons">chat_bubble_outline</i>
+                    <small class="sr-only">chat</small>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="favorite-tab" data-toggle="tab" href="#favorite" role="tab"
+                    aria-controls="favorite" aria-selected="false">
+                    <i class="material-icons">favorite_border</i>
+                    <small class="sr-only">favorite</small>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                    aria-controls="profile" aria-selected="false">
+                    <i class="material-icons">person</i>
+                    <small class="sr-only">Profile</small>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- sticky footer tabs ends -->
+
+    <!-- scroll to top button -->
+    <!-- <button type="button" class="btn btn-default default-shadow scrollup bottom-right position-fixed btn-44"><span class="arrow_carrot-up"></span></button> -->
+    <!-- scroll to top button ends-->
+
+    <!-- Required jquery and libraries -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap-4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- cookie css -->
+    <script src="assets/vendor/cookie/jquery.cookie.js"></script>
+
+    <!-- Swiper slider  -->
+    <script src="assets/vendor/swiper/js/swiper.min.js"></script>
+
+    <!-- Masonry js -->
+    <script src="assets/vendor/masonry/masonry.pkgd.min.js"></script>
+    <script src="jquery-confirm.min.js"></script>
+
+    <!-- Customized jquery file  -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/color-scheme-demo.js"></script>
+
+    <script>
+        "use strict";
+        $(document).ready(function () {
+            /* Swiper slider */
+            var swiper = new Swiper(".swiper-stories", {
+                slidesPerView: "auto",
+                spaceBetween: 0,
+                pagination: false,
+            });
+
+            /* masonry js */
+            $('#search-tab[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+                $(".grid").masonry({
+                    // use outer width of grid-sizer for columnWidth
+                    columnWidth: ".grid-sizer",
+                    // do not use .grid-sizer in layout
+                    itemSelector: ".grid-item",
+                    percentPosition: true,
+                    gutter: 0,
+                });
+
+                var swiper = new Swiper(".swiper-stories2", {
+                    slidesPerView: "auto",
+                    spaceBetween: 0,
+                    pagination: false,
+                });
+                var swiper = new Swiper(".swiper-people", {
+                    slidesPerView: "auto",
+                    spaceBetween: 20,
+                    pagination: false,
+                });
+                var swiper = new Swiper(".swiper-stories3", {
+                    slidesPerView: "auto",
+                    spaceBetween: 0,
+                    pagination: false,
+                });
+            });
+
+            /* status */
+            function start() {
+                var duration = 4000; // it should finish in 3 seconds !
+                $(".statusbar").stop().css("width", 0).animate(
+                    {
+                        width: "100%",
+                    },
+                    {
+                        duration: duration,
+                    }
+                );
+
+                setTimeout(function () {
+                    $("#statusmodal").modal("hide");
+                    $(".statusbar").stop();
+                    $(".statusbar").css("width", "0");
+                }, duration);
+            }
+            $("#statusmodal").on("shown.bs.modal", function (e) {
+                start();
+            });
+            $("#statusmodal").on("hide.bs.modal", function (e) {
+                $(".statusbar").stop().css("width", "0");
+            });
+
+            /* toast message */
+            setTimeout(function () {
+                $(".toast").toast("show");
+            }, 2000);
+        });
+    </script>
+    
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="qr-scan.js"></script>
+    <script src="cordova.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <script src="app.js"></script>
+</body>
+
+</html>

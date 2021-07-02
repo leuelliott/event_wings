@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.proevent.dele.eventwings" version="1.0.2" android-versionCode="" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>EventWing</name>
+    <description>
+        An Event Management System.
+    </description>
+    <author email="deelesisuanu@gmail.com" href="http://deelesisuanu.com">
+        Deelesi Suanu
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <!-- <icon src="res/img/logo.png" platform="android" width="57" height="57" density="mdpi" />
+    <icon src="res/img/logo.png" platform="ios" width="57" height="57" density="mdpi" /> -->
+    <preference name="loadUrlTimeoutValue" value="240000" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarBackgroundColor" value="#7840d8" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <preference name="LoadingDialog" value="Please Wait..." />
+        <preference name="HideKeyboardFormAccessoryBar" value="true" />
+        <preference name="Fullscreen" value="true" />
+        <config-file after="uses-permission" parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.CAMERA" />
+            <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+            <uses-permission android:name="android.permission.BLUETOOTH" />
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+            <uses-permission android:name="android.permission.WRITE_CONTACTS" /> -->
+        </config-file>
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    </platform>
+    <plugin name="cordova-plugin-android-permissions" spec="^1.0.0" />
+    <!-- <engine name="android" spec="^7.1.4" /> -->
+</widget>

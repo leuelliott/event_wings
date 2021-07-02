@@ -1,0 +1,11 @@
+{
+    "android": {
+      "release": {
+        "keystore": "eventwings.keystore",
+        "storePassword": "remember55",
+        "alias": "eventwings",
+        "password" : "remember55",
+        "keystoreType": ""
+      }
+    }
+  }

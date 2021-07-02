@@ -1,0 +1,18 @@
+{
+    "android": {
+      "debug": {
+        "keystore": "eventwings.keystore",
+        "storePassword": "android",
+        "alias": "mykey1",
+        "password" : "password",
+        "keystoreType": ""
+      },
+      "release": {
+        "keystore": "eventwings.keystore",
+        "storePassword": "remember55",
+        "alias": "eventwings",
+        "password" : "remember55",
+        "keystoreType": ""
+      }
+    }
+  }

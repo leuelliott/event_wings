@@ -1,0 +1,5 @@
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore eventwings.keystore eventwings.apk eventwings
+
+zipalign -v 4 eventwings.apk eventwings-final.apk
+
+cordova build android --release --buildConfig=build.json
